@@ -4,7 +4,7 @@ layout: page
 pager: true
 ---
 
-We organize one talk per month and post the videos in YouTube. Take a look in our [Calendar] and in our previous talks.
+We organize one talk per month and post the videos in YouTube. Take a look in our [Calendar] and in our previous talks bellow:
 {.lead}
 
 # [OpenStack](https://www.youtube.com/watch?v=Ifo-JVrQ9yw)
