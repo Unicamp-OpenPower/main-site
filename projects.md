@@ -24,7 +24,8 @@ Plus several individual users who are using Power for academic research (HTM) or
 
 # Research projects
 
-|Project Name| Description|
-|---|---|
-|HTM|Hardware Transactional Memory on Power architecture|
-|Code Verification|Code verification between multiple architectures|
+|Project Name|Description|People Involved|
+|---|---|---|
+|HTM|Hardware Transactional Memory on Power architecture|University of Campinas and University of Alberta|
+|Code Verification|Code verification between multiple architectures|University of Campinas|
+|Seismic - CRS| Common Reflection Surface|University of Campinas|
