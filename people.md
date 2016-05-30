@@ -10,10 +10,11 @@ pager: true
 
 * **Rodolfo Azevedo** is an associate professor at University of Campinas - UNICAMP
 * **Juliana Rodrigues** is a Computer Science undergrad student
-* **Maurício Bezerra** is a Computer Engineering undergrad student
+* **Guilherme Tiaki Sassai Sato** is a Computer Engineering undergrad student
+* **Guilherme Lucas** is a Computer Engineering undergrad student
+* **Bruno Takeshi** is a Computer Engineering undergrad student
 
 #From IBM
 
 * **Klaus Kiwi** works for the Linux Technology Center at IBM
 * **Rafael Sene** works for the Linux Technology Center at IBM
-

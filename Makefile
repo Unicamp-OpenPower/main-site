@@ -8,4 +8,4 @@ serve:
 	python -m urubu serve
 
 publish:
-	cp -R _build/* /var/vhost/openpower    
+	rsync -vrlu --rsh=ssh _build/*  lampiao:/var/vhost/openpower
