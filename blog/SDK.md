@@ -14,6 +14,16 @@ You can use a script to download the necessary packages in the link above:
 ```
 ftp://ftp.unicamp.br/pub/linuxpatch/toolchain/at/at_downloader/?cm_mc_uid=92476109699314629396752&cm_mc_sid_50200000=1464625581
 ```
+Download the script and change its permission with the command above:
+
+```
+chmod +x <script name>
+```
+And then run the script with:
+
+```
+./<script name>
+```
 
 Please download the packages for Ubuntu 14.10. Then, the folder will be full of .deb\
 files. The next step is to install some of these packages using dpkg.
