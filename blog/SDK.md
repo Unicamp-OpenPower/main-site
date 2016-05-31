@@ -5,10 +5,10 @@ date: 2016-05-30
 author: Guilherme Lucas da Silva
 ---
 
-This is a brief tutorial about how to install the IBM SDK on Power Machines. I decided\
-to do this, cause Ubuntu 16.04 is not oficially supported, but there is a way out.
+This is a brief tutorial about how to install the IBM SDK on Power Machines. I decided
+to do this, cause Ubuntu 16.04 is not oficially supported, but it is possible to install it through the provided packages.
 
-### Downloading Packages
+# Downloading Packages
 You can use a script to download the necessary packages in the link above:
 
 ```
@@ -25,11 +25,11 @@ And then run the script with:
 ./<script name>
 ```
 
-Please download the packages for Ubuntu 14.10. Then, the folder will be full of .deb\
+Please download the packages for Ubuntu 14.10. Then, the folder will be full of .deb
 files. The next step is to install some of these packages using dpkg.
 
-### Instaling Packages and Toolchain
-Now, you need to install some of these. This is simple, but you have to do it following\
+# Instaling Packages and Toolchain
+Now, you need to install some of these. This is simple, but you have to do it following
 the order above. The command for each of those is
 ```
 dpkg -i <package name>
@@ -43,10 +43,11 @@ advance-toolchain-atX.X-mcore-libs-X.X-X
 ```
 You can ignore the errors and move on.
 
-### Installing IBM SDK
+# Installing IBM SDK
 After all the dependencies issues are solved, you can run
 
 ```
 apt-get install ibm-sdk-lop
 ```
 and try to run the software.
+	
