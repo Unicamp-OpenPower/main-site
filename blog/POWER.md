@@ -31,6 +31,11 @@ sudo apt-get install gcc
 sudo apt-get install g++
 ```
 
+Link do repositório do cmp_toy:
+```
+github.com/gga-cepetro/cmp
+```
+
 Durante a instalação é necessário rodar o CMake, que também não esta instalado. Para acertar esse problema, rode:
 
 ```

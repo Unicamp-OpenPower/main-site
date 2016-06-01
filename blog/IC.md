@@ -24,6 +24,11 @@ Também precisamos do CMake para completar a instalação do Seismic Unix. Rode:
 sudo apt-get install cmake
 ```
 
+Link do repositório do cmp_toy:
+```
+github.com/gga-cepetro/cmp
+```
+
 Agora para realmente terminar a instalção, basta rodar os seguintes comandos:
 
 ```
