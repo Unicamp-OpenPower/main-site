@@ -51,3 +51,12 @@ apt-get install ibm-sdk-lop
 ```
 and try to run the software.
 	
+
+Note: to run the ibm-sdk-loop on the Power Machines using ssh, you will have to connect 
+to the server using
+
+```
+ssh -X 
+``` 
+
+This command is necessary to xforward the image of the sdk running.
