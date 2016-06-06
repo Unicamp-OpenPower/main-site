@@ -56,7 +56,25 @@ Note: to run the ibm-sdk-loop on the Power Machines using ssh, you will have to 
 to the server using
 
 ```
-ssh -X 
+ssh -XC -c blowfish-cbc,arcfour <user>@<host> -p <port_number>
 ``` 
 
+The blowfish-cbc,arcfour will make your connection even better.
 This command is necessary to xforward the image of the sdk running.
+Note2: if you get the "no matching cipher found" error, here you go the solution:
+
+run the command above:
+```
+ssh -Q cipher localhost | paste -d , -s
+```
+
+Now its time to change the sshd_config file on the server(super privileges needed).
+Add on the /etc/ssh/sshd_config a line with:
+```
+Ciphers <output of the last command>
+```
+
+Reboot the machine to make this alterations running:
+```
+sudo shutdown -r now
+```
