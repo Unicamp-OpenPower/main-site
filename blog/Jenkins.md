@@ -39,7 +39,7 @@ Following, add a build step selecting **Execute Shell** and enter the shell scri
 
 # Step 3: Configuring GitHub plugin
 
-Go to **Manage Jenkins** → **Configure System** → **GitHub section** → **Advanced** → **Manage additional GitHub Actions** → **Convert login and password to token**
+Go to **Manage Jenkins** → **Configure System** → **GitHub** section → **Advanced** → **Manage additional GitHub Actions** → **Convert login and password to token**
 
 A new sub-section will appear right above.
 
