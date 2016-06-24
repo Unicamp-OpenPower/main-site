@@ -7,6 +7,11 @@ author: Guilherme Lucas da Silva
 
 # Optimizing C/C++ Applications with IBM SDK Build Advisor
 This is a brief text about how to use the IBM SDK Build Advisor to optimize C/C++ aplications on Power Servers.
+You can get the project and learn how to run on the link below:
+
+```
+https://github.com/Guilhermeslucas/cmp
+```
 
 ## Running seismic applications without optimization flags
 Here are some results on Power Machine before the optimization process.  
