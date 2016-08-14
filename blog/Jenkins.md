@@ -1,5 +1,5 @@
 ---
-title: Building a continuos integration platform using Jenkins and GitHub
+title: Building a continuous integration platform using Jenkins and GitHub
 layout: page
 date: 2016-06-15
 author: Guilherme Tiaki Sato
@@ -8,7 +8,8 @@ author: Guilherme Tiaki Sato
 Continuous integration allows code to be tested automatically every time it’s changed, detecting errors as early as possible. In this tutorial a CI using a GitHub repository will be approached.
 
 # Step 1: Installing and setting up Jenkins and Git
-To install Jenkins execute the following commands:
+
+To install Jenkins, execute the following commands:
 
 	wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
 	sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
@@ -19,25 +20,43 @@ To install git, simply execute:
 
 	sudo apt-get install git
 
-Access Jenkins through http://localhost:8080 and install the GitHub plugin. To do this go to **Manage Jenkins** → **Manage Plugins** → **Available** and search for the **GitHub plugin**. Press **Download now and install after restart** and check **Restart Jenkins when installation is complete and no jobs are running** in the installation screen. All the dependent plugins will be also installed.
+Access Jenkins through http://localhost:8080 and follow the instructions for the initial setup. Choose **Install suggested plugins** when asked.
 
-<img src="./Jenkins_images/Github_plugin_installation.png" width="100%"/>
+<img src="./Jenkins_images/Plugins.png" width="100%"/>
 
 # Step 2: Creating a job
 
-In Jenkins dashboard, click on **New Item**, give your project a name (e.g. Your repository name at Github), and select **Freestyle project**.
+In Jenkins dashboard, click on **New Item**, give your project a name and select **Freestyle project**.
 
-At the subsequently settings page that opens, check **GitHub project** and enter the GitHub URL of the project. Use the format https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+You may choose **Discard old builds** in order to avoid using too much storage in the long term.
+
+Check **GitHub project** and enter the GitHub URL of the project. Use the format *https://github.com/YOUR-USERNAME/YOUR-REPOSITORY*
 
 In source code management section, choose **Git** and enter the repository URL the same way as above.
 
-Under **Build Triggers** check **Build when a change is pushed to GitHub**
+## Step 2.1: Choosing the build trigger
 
-Following, add a build step selecting **Execute Shell** and enter the shell script required to build the code and running a test on it. The test input and expected output must be in the repository.
+Under **Build Triggers** it is possible to choose to build periodically or when a change is pushed into GitHub. Although building only when GitHub changes is more efficient, it is required to your Jenkins server to be accessible through the internet, and the you must own the repository. Building periodically may waste resources, but it is simpler to configure.
+
+### Step 2.1.1: Build Periodically
+
+Check **Build Periodically** and define the period using the proper syntax found when clicking the **?**.
+
+Complete the job creating by adding a build step (e.g. a shell script to compile and run a test) and jump to step 4
+
+The test input and expected output should be in the repository.
+
+### Step 2.1.2: Build when a change is pushed into GitHub
+
+Check build when a change is pushed into GitHub
+
+Complete the job creating by adding a build step (e.g. a shell script to compile and run a test) and follow to step 3
+
+The test input and expected output should be in the repository.
 
 <img src="./Jenkins_images/Job_configuration.png" width="100%"/>
 
-# Step 3: Configuring GitHub plugin
+# Step 3: Configuring GitHub plugin - Skip if building periodically
 
 Go to **Manage Jenkins** → **Configure System** → **GitHub** section → **Advanced** → **Manage additional GitHub Actions** → **Convert login and password to token**
 
@@ -49,34 +68,61 @@ Select **From login and password**, fill your login and password from GitHub and
 
 Above this sub-section, click **Add GitHub server**. Keep the **API URL** unchanged.
 
-Under **Credentials** dropdown menu, select the token just created and test your connection. If everything works fine, don't leave this screen yet and follow to step 4.
+Under **Credentials** dropdown menu, select the token just created and test your connection.
 
 <img src="./Jenkins_images/Github_server.png" width="100%"/>
 
-# Step 4: Changing GitHub POST URL
+# Step 4: Testing it
 
-As Jenkins is running local and not accessible from the internet, a tunnel must be created to allow GitHub to deliver POST requests.
+If using periodical build, click the **Build now** icon to test. If the test fails, check the console output to find the issue (e.g. missing compiler).
 
-Download [ngrok](https://ngrok.com/download), unzip and run using:
+If using GitHub trigger, change a file in the repository. The build should start automatically in a few seconds.
 
-	$ ./ngrok http 8080
+#Step 5: Adding slave machines - Optional
 
-Ngrok will generate a URL accessible from the internet that forwards to port 8080 of localhost.
+As your projects grow, you may run out of resources in your machine. A possible solution is to add one or more slave machines, which will be responsible for building your projects, while the current machine will become the master and manage everything (the master will still be able to run jobs if desired).
 
-Do not close the terminal window, otherwise the URL will stop working.
+The slave machine doesn't need Jenkins installed on it. There are many ways to connect the slave with the master, here, SSH will be used.
 
-<img src="./Jenkins_images/Ngrok.png" width="100%"/>
+Install Java and Git in the slave using:
 
-Check **Specify another hook url for GitHub configuration** under **Override Hook URL** and change the http://localhost:8080 part of the URL for the URL generated by Ngrok.
+	sudo apt-get install default-jre
+	sudo apt-get install git
 
-It should look like http://92832de0.ngrok.io/github-webhook/
+Create a directory to be used by Jenkins, in this case will be the same path used by default in the master machine: /var/lib/jenkins
 
-Press **re-register hooks for all jobs** and then **Save**.
+	sudo mkdir /var/lib/jenkins
 
-<img src="./Jenkins_images/Override_hook_url.png" width="100%"/>
+Change the ownership of the directory to the same user used to login using SSH
 
-# Step 5: Testing it
+	chown ubuntu:ubuntu /var/lib/jenkins
 
-Try to edit a file in the GitHub repository. You should be able to see a new Build under the Build history panel at the left of the screen.
+Back to the master machine:
 
-Try also changing the files in a way that should make the build fail, such as changing the expect output of the test.
+Go to **Manage Jenkins** → **Manage Nodes** → **New Node**
+
+Name your node and select **Permanent Agent**
+
+The recommended **# of executors** is the number of cores in the slave machine
+
+The **Remote root directory** is the path to the directory created.
+
+If necessary to divide the slave machines into different groups, label them (e.g. the OS running in the machine, the CPU architecture)
+
+The **Launch method** used here will be SSH, but other methods are also fine.
+
+Simply enter your host and create a credential using your username and password, or username and private key.
+
+Press **Save**
+
+<img src="./Jenkins_images/Slave_node.png" width="100%"/>
+
+##Step 5.1: Restricting machines where projects can be run
+
+If your slaves have different environments, your should restrict the machines where each project will run.
+
+Under the **project** settings, check **Restrict where this project can be run** and type the machine name, use a label, or even use a more complex rule using logical operators (click the **?** for more information)
+
+<img src="./Jenkins_images/Restrict_where_this_project_can_be_run.png" width="100%"/>
+
+To prevent the master machine to run projects, go to **Manage Jenkins** → **Manage Nodes** → **master** → **Configure** → **# of executors** and set to 0.
