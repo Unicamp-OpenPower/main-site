@@ -11,7 +11,7 @@ In this tutorial you'll learn all the basic steps to sucessfully create and logi
 
 The first visible screen of our dashboard is the Overview. It shows all the relevant information of our project. The **Instances** tab shows our project's virtual machines. **Images** tab shows the available images to be used and **Access & Security** has project's security groups, public keys and firewall rules. Feel free to explore the remaining tabs.
 
-![Overview](minicloud-tutorial-imgs/overview.png)
+<img src="./minicloud-tutorial-imgs/overview.png" width="100%"/>
 
 ## 1. Setting up Access & Security
 
