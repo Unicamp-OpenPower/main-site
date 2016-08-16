@@ -21,7 +21,7 @@ First thing we have to do is adding our public key to our project. That way, whe
 
 Clicking on "Create Key Pair" will pop the screen below:
 
-![Create Keypair](minicloud-tutorial-imgs/create-keypair.png)
+<img src="./minicloud-tutorial-imgs/create-keypair.png" width="100%"/>
 
 After typing a good name for your public key (easily identifiable), it will be downloaded to your machine in ***.pem** format. Remember to move it to a place easy to remember. By default, all public keys are stored at **~/.ssh**.
 
@@ -29,25 +29,25 @@ After typing a good name for your public key (easily identifiable), it will be d
 
 If you choose to import an existing public key, you have to copy the contents of your ***.pub** key to the **Public Key** field.
 
-![Import Keypair](minicloud-tutorial-imgs/import-keypair.png)
+<img src="./minicloud-tutorial-imgs/import-keypair.png" width="100%"/>
 
 Since is not possible to select multiple keys for a VM, you can add as many keys as you want in this field, and all of them will be valid when trying to login later.
 
-![Multiple import keypair](minicloud-tutorial-imgs/import-multiple-keypair.png)
+<img src="./minicloud-tutorial-imgs/import-multiple-keypair.png" width="100%"/>
 
 ## 2. Creating an Instance
 
 Go to **Compute** and click on **Images** tab. Pick a image by clicking in it's respective **Launch a instance** button. In **Flavor** you can specify which kind of machine you want and in **Instance Count** you can specify the number of instances you want to create. In this example, we'll create one **m1.small** Ubuntu machine.  
 
-![Launch Instance](minicloud-tutorial-imgs/launch-instance.png)
+<img src="./minicloud-tutorial-imgs/launch-instance.png" width="100%"/>
 
 In **Access & Security** tab we select which key pair will have access to the instance we're creating and select the **default** group. After selecting your key pair, go to **Network** tab.
 
-![Select Key Pair](minicloud-tutorial-imgs/launch-instance-key.png)
+<img src="./minicloud-tutorial-imgs/launch-instance-key.png" width="100%"/>
 
 Now drop to **Selected Networks** box all networks that you want your instance to be part of. Since we've created only one network, it'll be selected automatically.
 
-![Select Network](minicloud-tutorial-imgs/launch-instance-network.png)
+<img src="./minicloud-tutorial-imgs/launch-instance-network.png" width="100%"/>
 
 **Post-Creation** and **Advanced Options** tabs are optional.
 
@@ -55,11 +55,11 @@ Now drop to **Selected Networks** box all networks that you want your instance t
 
 In **Overview** you'll see that now our instance shows up. In **Actions**, click on the dropdown menu and select **Associate Floating IP**.
 
-![Associate Floating IP](minicloud-tutorial-imgs/floating-ip.png)
+<img src="./minicloud-tutorial-imgs/floating-ip.png" width="100%"/>
 
 Now, to access our instance by SSH, we need to get the last digits of our floating IP address and sum 20000. This is the port we'll use to connect.
 
-![Result](minicloud-tutorial-imgs/result.png)
+<img src="./minicloud-tutorial-imgs/result.png" width="100%"/>
 
 So, in the above example, we would connect with:
 
