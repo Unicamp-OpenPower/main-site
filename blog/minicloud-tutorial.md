@@ -1,3 +1,10 @@
+---
+title: Getting Started with Minicloud
+layout: page
+date: 2016-08-16
+author: Juliana Rodrigues
+---
+
 ### Getting Started with Minicloud
 
 ---
