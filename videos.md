@@ -7,6 +7,18 @@ pager: true
 We organize one talk per month and post the videos in YouTube. Take a look in our [Calendar] and in our previous talks bellow:
 {.lead}
 
+# [Migrando aplicações para a arquitetura Power](https://www.youtube.com/watch?v=73Bue79kDuE)
+
+**Abstract**: Manter sistemas legados em operação em novas arquiteturas representa um desafio tecnológico. Algumas empresas chegam a investir milhares de dólares na tentativa de migrar seus sistemas para novas arquiteturas. Contudo, em virtude da complexidade de algumas aplicações, o resultado final da migração nem sempre sai conforme o esperado.
+
+Variações sensíveis entre as arquiteturas, como diferenças no conjunto de instruções, da ABI ou na forma como os bytes são organizados em memória, podem ocasionar bugs difíceis de serem detectados durante a fase de teste. Em alguns casos, a migração pode ter um resultado muito aquém do esperado, reduzindo drasticamente o desempenho da aplicação.
+
+Nessa palestra, abordaremos alguns problemas clássicos de migração e como devemos proceder para resolvê-los, de forma a reduzir o impacto gerado no desempenho e na precisão dos resultados após a migração. Além disso, apresentaremos de forma didática alguns cuidados que devemos ter quando buscamos desenvolver programas portáveis.
+
+**Alisson Linhares** é mestre em Ciência da Computação pela Unicamp e tem mais de 7 anos de experiência com desenvolvimento de aplicações de baixo nível. Atualmente, trabalha no Linux Technology Center da IBM desenvolvendo o IBM SDK (kit de desenvolvimento oficial para Linux nos processadores Power).
+
+[Watch on YouTube](https://www.youtube.com/watch?v=73Bue79kDuE)
+
 # [OpenStack](https://www.youtube.com/watch?v=Ifo-JVrQ9yw)
 
 **Abstract:** Criado originalmente por uma parceira entre a Nasa e a RackSpace atualmente o OpenStack é gerenciado por um consorcio de mais de 500 membros, incluindo grandes empresas como IBM, Intel, Cisco, Dell e etc. O OpenStack pode ser definido como um Sistema Operacional projetados para nuvem capaz de controlar uma grande quantidade de recursos, utilizando um um conjunto de projetos de software open source para configurar e operar uma infraestrutura de computação e armazenamento.
