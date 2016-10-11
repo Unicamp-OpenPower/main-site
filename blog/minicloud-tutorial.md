@@ -65,6 +65,10 @@ So, in the above example, we would connect with:
 
     ssh ubuntu@177.220.10.134 -p 20081
 
-If its Fedora, we'd use:
+For Fedora and CentOS, use respectively:
 
-    ssh fedora@177.220.10.134 -p 20081
+	ssh fedora@177.220.10.134 -p 20081
+
+<!>
+
+	ssh centos@177.220.10.134 -p 20081
