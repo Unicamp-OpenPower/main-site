@@ -2,7 +2,7 @@
 title: A Brief tutorial about how to use the SDAccel service
 layout: page 
 date: 2016-10-06
-author: Guilherme Lucas
+author: Guilherme Lucas and Bruno Hori Takeshi
 ---
 
 # How to use the SDAccel Service
@@ -56,4 +56,10 @@ sdaccel "some_name".tcl
 ```
 
 It will run and the results will appear on the folder.
+
+Note: if you prefer a video tutorial, Bruno made a really good one. You can reach it on this link:
+```
+https://www.youtube.com/watch?v=3pFlAyPXCKo
+```
+
 Hope it was helpful.
