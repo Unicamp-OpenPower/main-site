@@ -1,6 +1,6 @@
 ---
 title: A Brief tutorial about how to use the SDAccel service
-layout: page 
+layout: page
 date: 2016-10-06
 author: Guilherme Lucas and Bruno Hori Takeshi
 ---
@@ -33,7 +33,7 @@ A desktop environment will appear on the screen.
 Now, on the virtualized desktop, go to *Applications* -> *System Tools* -> *Terminal*. Now type the following commands:
 
 ```
-cd 
+cd
 mkdir test
 cd test
 git clone https://github.com/Guilhermeslucas/SDAccel_Examples.git
@@ -57,9 +57,8 @@ sdaccel "some_name".tcl
 
 It will run and the results will appear on the folder.
 
-Note: if you prefer a video tutorial, Bruno made a really good one. You can reach it on this link:
-```
-https://www.youtube.com/watch?v=3pFlAyPXCKo
-```
+Note: if you prefer a [video tutorial on YouTube](https://www.youtube.com/watch?v=3pFlAyPXCKo), Bruno made a really good one.
+
+
 
 Hope it was helpful.
