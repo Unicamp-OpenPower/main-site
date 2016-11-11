@@ -62,13 +62,26 @@ Now, to access our instance by SSH, we need to get the last digits of our floati
 <img src="./minicloud-tutorial-imgs/result.png" width="100%"/>
 
 So, in the above example, we would connect with:
+	
+	ssh ubuntu@177.220.10.134 -p 20081
 
-    ssh ubuntu@177.220.10.134 -p 20081
+For other OSs use:
 
-For Fedora and CentOS, use respectively:
-
-	ssh fedora@177.220.10.134 -p 20081
-
-<!>
-
-	ssh centos@177.220.10.134 -p 20081
+<table style="width:100%">
+  <tr>
+    <th>Image(s)</th>
+    <th>Command</th>
+  </tr>
+  <tr>
+    <td>CentOS 7</td>
+    <td><div class="codehilite"><pre>ssh centos@177.220.10.134 -p 20081</pre></div></td>
+  </tr>
+  <tr>
+    <td>Debian 8</td>
+    <td><div class="codehilite"><pre>ssh debian@177.220.10.134 -p 20081</pre></div></td>
+  </tr>
+  <tr>
+    <td>Fedora 	&lt;23,24&gt; &lt;LE,BE&gt;</td>
+    <td><div class="codehilite"><pre>ssh fedora@177.220.10.134 -p 20081</pre></div></td>
+  </tr>
+</table>
