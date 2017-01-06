@@ -82,3 +82,6 @@ suximage < cmp.stack.su
 ```
 
 O output desse comando deve ser uma imagem com o plot de algumas curvas. 
+
+Post escrito por Guilherme Lucas. 
+Mais um pouco do meu trabalho no meu Github https://github.com/Guilhermeslucas .

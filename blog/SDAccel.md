@@ -59,6 +59,7 @@ It will run and the results will appear on the folder.
 
 Note: if you prefer a [video tutorial on YouTube](https://www.youtube.com/watch?v=3pFlAyPXCKo), Bruno made a really good one.
 
-
-
 Hope it was helpful.
+
+Post written by Guilherme Lucas.
+You can see some of my work at https://github.com/Guilhermeslucas .

@@ -52,7 +52,6 @@ real	0m2.930s
 
 As you can see, Build Advisor is very effective.
 
-
-
-
+Post written by Guilherme Lucas.
+You can see some of my work at https://github.com/Guilhermeslucas .
 

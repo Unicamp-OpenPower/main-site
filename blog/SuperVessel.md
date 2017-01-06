@@ -68,3 +68,7 @@ After you logout, don't forget to run :
 sudo vpnc-disconnect
 ```
 That should do the work!
+
+Post written by Guilherme Lucas.
+You can see some of my work at https://github.com/Guilhermeslucas .
+
