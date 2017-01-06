@@ -78,3 +78,7 @@ Reboot the machine to make this alterations running:
 ```
 sudo shutdown -r now
 ```
+
+Post written by Guilherme Lucas.
+You can see some of my work at https://github.com/Guilhermeslucas .
+

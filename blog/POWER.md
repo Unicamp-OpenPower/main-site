@@ -79,3 +79,6 @@ sys	0m0.056s
 ```
 
 Basicamente, os passos são esses. Tentei fazer esse tutorial da maneira mais detalhada possível. Se ainda restarem dúvidas, não exitem em entrar em contato.
+
+Post escrito por Guilherme Lucas.
+Mais um pouco do meu trabalho no meu Github https://github.com/Guilhermeslucas .
