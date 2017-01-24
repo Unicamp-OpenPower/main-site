@@ -11,10 +11,10 @@ Continuous integration allows code to be tested automatically every time it’s 
 
 To install Jenkins, execute the following commands:
 
-	wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
-	sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+	wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+	sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 	sudo apt-get update
-	sudo apt-get install Jenkins
+	sudo apt-get install jenkins
 
 To install git, simply execute:
 
