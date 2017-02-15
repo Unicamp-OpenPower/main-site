@@ -1,12 +1,9 @@
 ---
-title: How to Install IBM SDK on Ubuntu 16.04 Power Machines
+title: How to Install IBM SDK on Ubuntu 16.04/14.04 Power Machines
 layout: page
 date: 2016-05-30
 author: Guilherme Lucas da Silva
 ---
-
-This is a brief tutorial about how to install the IBM SDK on Power Machines. I decided
-to do this, cause Ubuntu 16.04 is not oficially supported, but it is possible to install it through the provided packages.
 
 # Downloading Packages
 You can use a script to download the necessary packages in the link above:
@@ -44,13 +41,20 @@ advance-toolchain-atX.X-mcore-libs-X.X-X
 You can ignore the errors and move on.
 
 # Installing IBM SDK
-After all the dependencies issues are solved, you can run
+After all the dependencies issues are solved, download fdpr_wrap, fdpr-pro, pthread-mon, ibm-sdk-lop and ibm-sdk-lop-remote-dependencies on
+this link:
 
 ```
-apt-get install ibm-sdk-lop
+https://www-304.ibm.com/webapp/set2/sas/f/lopdiags/sdkdownload.html#4
 ```
-and try to run the software.
-	
+
+Install each of these packages with dpkg again, running:
+
+```
+sudo dpkg -i <package name>
+```
+
+respecting the sequence above. 
 
 Note: to run the ibm-sdk-loop on the Power Machines using ssh, you will have to connect 
 to the server using
