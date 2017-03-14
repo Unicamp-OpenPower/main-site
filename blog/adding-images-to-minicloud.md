@@ -5,6 +5,8 @@ date: 2017-02-22
 author: Guilherme Tiaki Sato
 ---
 
+**Note: This feature is disabled by default, and may be enabled upon request.**
+
 To add your own images to Minicloud, open the **Images** section in the dashboard and select **Create image**
 
 <center><img src="./adding_images_to_minicloud_images/1.png" width="80%"/></center>
