@@ -1,0 +1,3 @@
+[submodule "minicloud"]
+	path = minicloud
+	url = git@github.com:Unicamp-OpenPower/minicloud.git

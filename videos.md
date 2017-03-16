@@ -7,6 +7,17 @@ pager: true
 We organize one talk per month and post the videos in YouTube. Take a look in our [Calendar] and in our previous talks bellow:
 {.lead}
 
+# [HHVM  - Uma breve introdução a compiladores JIT para linguagens dinâmicas](https://www.youtube.com/watch?v=uaOD16L7PdQ)
+
+**Abstract**: Atualmente, paginas da internet são combinações de conteúdos gerados dinamicamente no servidor e programas que fornecem interatividade do lado cliente, tornando-se cada vez mais complexas. Nesse contexto, linguagens dinâmicas para a web como o PHP, são amplamente utilizadas. Entretanto, a medida que a complexidade cresce, ao mesmo tempo, cresce a necessidade de obter-se um desempenho cada vez maior e algumas dessas linguagens não são capazes de tirar o melhor proveito na execução de código nativo pois foram desenvolvidas em uma época onde a maior parte do contéudo para web era estático.
+
+Para obter um melhor desempenho tecnicas mais avançadas como JIT (Just In Time compilation) têm sido utilizadas. Nessa palestra iremos explorar os detalhes internos da HipHop Virtual Machine (HHVM) uma maquina virtual de processo baseada em JIT que serve para executar código escrito em PHP e Hack e que permite melhorar o desempenho na execução de programas escritos nessas linguagens.
+
+**About the speaker**: Rogerio Alves é mestre em Ciência da Computação com mais de 5 anos de experiência com desenvolvimento de aplicações de baixo nível, além de experiência com linguagens para web. Atualmente, trabalha no Linux Technology Center da IBM com compiladores JIT portando o HHVM para a arquitetura POWER.
+
+[Watch on YouTube](https://www.youtube.com/watch?v=uaOD16L7PdQ)
+
+
 # [Leveraging the Crowd: Supporting Newcomers to Build an OSS Community](https://www.youtube.com/watch?v=vbDx2jnp91M)
 
 **Abstract:** Open Source Software is an important economic driving force. Companies are aware of the benefits and are adopting OSS as a strategy, opening their source code. However, fostering an OSS developer community is challenging. Newcomers to OSS projects face many technical and social barriers and commonly drop out before making their first contribution. In this keynote, I will talk about how companies are opening their code, the barriers newcomers face to join OSS projects, and FLOSSCoach, a tool we developed to support newcomers first steps.
