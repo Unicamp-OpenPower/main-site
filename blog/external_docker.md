@@ -1,7 +1,7 @@
 ---
 title: Acessing a Docker Container outside Minicloud
 layout: page
-date: 2016-05-20
+date: 2017-03-14
 author: Guilherme Lucas
 ---
 
