@@ -65,6 +65,8 @@ To access the virtual machine via SSH, if the associated IP is 10.3.w.xyz, we'll
 
 <center><img src="./minicloud-tutorial-imgs/ip-to-port.png" width="25%" align="middle"/></center>
 
+**After associating an IP, wait 5 minutes before connecting via SSH**
+
 So, in the above example, we would connect with:
 	
 	ssh ubuntu@177.220.10.134 -p 21023
