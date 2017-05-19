@@ -7,6 +7,19 @@ pager: true
 We organize one talk per month and post the videos in YouTube. Take a look in our  previous talks [videos]:
 {.lead}
 
+# Palestra: POWER9: a nova geração de processadores POWER (ou processador para a Era Cognitiva)
+
+**Data:** 11/05/2017
+
+**Hora:** 18:00
+
+**Local:** IC3 Sala 352
+
+**Palestrante**: Leonardo Garcia é Engenheiro de Computação e mestre em
+Ciência da Computação pela Universidade Estadual de Campinas (Unicamp) e
+trabalha no Linux Technology Center da IBM há 11 anos. Ele tem liderado
+o time de desenvolvimento de KVM para Power há 4 anos.
+
 
 # Presentation: HHVM  - Uma breve introdução a compiladores JIT para linguagens dinâmicas
 
