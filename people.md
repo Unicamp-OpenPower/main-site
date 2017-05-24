@@ -1,6 +1,6 @@
 ---
-title: People Involved  
-layout: simple_page 
+title: People Involved
+layout: simple_page
 pager: true
 ---
 
@@ -9,7 +9,6 @@ pager: true
 #From UNICAMP
 
 * **Rodolfo Azevedo** is an associate professor at University of Campinas - UNICAMP
-* **Juliana Rodrigues** is a Computer Science undergrad student
 * **Guilherme Tiaki Sassai Sato** is a Computer Engineering undergrad student
 * **Guilherme Lucas** is a Computer Engineering undergrad student
 * **Bruno Takeshi** is a Computer Engineering undergrad student
