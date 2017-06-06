@@ -11,6 +11,9 @@ pager: true
 * **Rodolfo Azevedo** is an associate professor at University of Campinas - UNICAMP
 * **Guilherme Tiaki Sassai Sato** is a Computer Engineering undergrad student
 * **Guilherme Lucas** is a Computer Engineering undergrad student
+* **Rafael Pimenta** is a Computer Engineering undergrad student
+* **Nathália Kuromiya** is a Computer Engineering undergrad student
+* **Igor Torrente** is a Computer Science undergrad student   
 
 #From IBM
 
