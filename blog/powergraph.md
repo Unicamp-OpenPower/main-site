@@ -24,7 +24,8 @@ and exports it on a readable way. Thats how we did it:
 ## Infrastructure
 The infrastructure was not so complicated to configure. We have to download some
 packages and set some configurations (process we are automating with Ansible). All
-the system is deployed on Minicloud. The packages (all via apt) we are using are:
+the system is deployed on Minicloud. The packages (all via apt) we are using are:   
+
 - ipmitool
 - apache2
 - python2.7
@@ -43,7 +44,8 @@ pip install -r requirements.txt
 ```
 
 ## Back-end code
-PowerGraph was totally developed using ```Python```. There are three main codes:
+PowerGraph was totally developed using ```Python```. There are three main codes:   
+
 - powergraph.py
 - graph_csv.py
 - csvcreator.py
@@ -93,7 +95,8 @@ python2.7 graph_csv.py --host="server address" --port="server port"
 --jsonfile="path to bd jsonfile"
 ```
 
-Besides, you can use the following optional arguments:
+Besides, you can use the following optional arguments:   
+
 - interval: interval between each ipmi measure (default=10)
 - nread: number of ipmi measures to be done (default=infinity)
 - csv_interval: interval that a new csv file is made (deafult=300s)
