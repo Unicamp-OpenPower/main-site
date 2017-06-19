@@ -42,7 +42,35 @@ To solve all ```Python``` dependencies you can run:
 ```
 pip install -r requirements.txt
 ```
+### Apache configurations
+Here you will install two modules in your apache server and change the virtual
+host configuration file. Doing this you will be able to control your browser's cache.
 
+In your server terminal run:
+```
+sudo a2enmod headers
+sudo a2enmod expires
+sudo service apache2 restart
+```
+After that, find your virtual host configuration file
+(*/etc/apache2/sites-available/default/000-default.conf* if you are using ubuntu OS)
+and insert the following lines, adjusting the parameters according to your needs:
+
+```
+<Directory /var/www/html>
+   ExpiresActive On
+   ExpiresDefault "access plus 10 minutes"
+   ExpiresByType text/html "access plus 1 day"
+   ExpiresByType text/javascript "access plus 1 day"
+
+   # if it is your interest, you can set a specific expiration time for your csv file
+   # ExpiresByType text/csv "access plus 30 seconds"
+
+   <FilesMatch "file.csv">
+         Header set Cache-control "no-cache"
+   </FilesMatch>
+</Directory>
+```
 ## Back-end code
 PowerGraph was totally developed using ```Python```. There are three main codes:   
 
@@ -104,7 +132,7 @@ Besides, you can use the following optional arguments:
 
 ## Front-end code
 In order to create an interactive website that plot a graph from the csv file,
-you need first to deal with the following dependencies:
+you first need to deal with the following dependencies:
 
 - apache configurations
 - javascript libraries
@@ -112,40 +140,10 @@ you need first to deal with the following dependencies:
 After that, we have developed the code in **javascript/graph.js** where
 you can read and present in real time the data provided by the back-end.
 
-### Apache configurations
-Here you will install two modules in your apache server and change the virtual
-host configuration file. Doing this you will be able to control your browser's cache.
-
-In your server terminal run:
-```
-sudo a2enmod headers
-sudo a2enmod expires
-sudo service apache2 restart
-```
-After that, find your virtual host configuration file
-(*/etc/apache2/sites-available/default/000-default.conf* if you are using ubuntu OS)
-and insert the following lines, adjusting the parameters according to your needs:
-
-```
-<Directory /var/www/html>
-   ExpiresActive On
-   ExpiresDefault "access plus 10 minutes"
-   ExpiresByType text/html "access plus 1 day"
-   ExpiresByType text/javascript "access plus 1 day"
-
-   # if it is your interest, you can set a specific expiration time for your csv file
-   # ExpiresByType text/csv "access plus 30 seconds"
-
-   <FilesMatch "file.csv">
-         Header set Cache-control "no-cache"
-   </FilesMatch>
-</Directory>
-```
-
 ### Javascript libraries
 Here we have three libraries included in our html file (index.html).
 
-The first one is the **D3.js** library, a worldwide recognized tool to create
+The first one is the **D3.js** library, a worldwide known tool to create
 dynamic and interactive data visualizations, in other words, this is the engine
 of the website. Insert in your html body the `<script src="http://d3js.org/d3.v4.min.js"></script>`
 to get the most recent code from D3.js.
