@@ -17,9 +17,9 @@ tagline:
 Unicamp e IBM consolidam parcerias para comunidade acadêmica
 ============================================================
 
-São Paulo, 25 de fevereiro de 2015 – A Universidade Estadual de Campinas (Unicamp) e a IBM firmaram importantes parcerias para desenvolvimento da comunidade acadêmica na área de tecnologia da informação. As iniciativas envolvem dois projetos: uma MiniCloud pública da Unicamp com infraestrutura da IBM Power Systems® e participação da universidade no consórcio OpenPOWER Foundation.
+São Paulo, 25 de fevereiro de 2015 – A Universidade Estadual de Campinas (Unicamp) e a IBM firmaram importantes parcerias para desenvolvimento da comunidade acadêmica na área de tecnologia da informação. As iniciativas envolvem dois projetos: uma Minicloud pública da Unicamp com infraestrutura da IBM Power Systems® e participação da universidade no consórcio OpenPOWER Foundation.
 
-A MiniCloud da Unicamp (openpower.ic.unicamp.br/minicloud) oferece acesso gratuito às máquinas virtuais IBM Power Systems® para usuários acadêmicos e da comunidade Open Source. Este ambiente está disponível para desenvolvimento, testes ou migração de aplicações para o servidor da IBM. A MiniCloud utiliza o IBM PowerKVM™, que é uma solução de virtualização aberta que suporta a execução de um grande número de máquinas virtuais em um único servidor com sistema operacional Linux.
+A Minicloud da Unicamp (openpower.ic.unicamp.br/minicloud) oferece acesso gratuito às máquinas virtuais IBM Power Systems® para usuários acadêmicos e da comunidade Open Source. Este ambiente está disponível para desenvolvimento, testes ou migração de aplicações para o servidor da IBM. A Minicloud utiliza o IBM PowerKVM™, que é uma solução de virtualização aberta que suporta a execução de um grande número de máquinas virtuais em um único servidor com sistema operacional Linux.
 
 Já o OpenPOWER é uma comunidade aberta e colaborativa para desenvolvimento do processador IBM POWER. No final de 2013, a IBM abriu para o mercado a tecnologia do chip do processador POWER com o objetivo de gerar inovação e criar um ecossistema na plataforma. A Unicamp é a primeira instituição brasileira a participar do consórcio que, hoje, já conta com mais de 87 membros em todo mundo, entre empresas de hardware, software, computação técnica, data centers e universidades.
 

@@ -1,5 +1,5 @@
 ---
-title: Accessing a MiniCloud machine using PuTTY
+title: Accessing a Minicloud machine using PuTTY
 layout: page
 date: 2017-02-16
 author: Guilherme Tiaki Sato

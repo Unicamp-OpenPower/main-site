@@ -1,16 +1,16 @@
 ---
-title: Instalação de Seismic Unix e Cmp_toy em arquitetura Power 
-layout: page 
+title: Instalação de Seismic Unix e Cmp_toy em arquitetura Power
+layout: page
 date: 2016-05-20
 author: Guilherme Lucas
 ---
 
 # Tutorial de instalação do cmp_toy em Máquinas Power
 
-Esse é um breve tutorial de como foi para instalar e rodar o código sísmico cmp_toy nas máquinas Power, acessado pelo sistema de MiniCloud. 
+Esse é um breve tutorial de como foi para instalar e rodar o código sísmico cmp_toy nas máquinas Power, acessado pelo sistema de Minicloud.
 Todo o processo foi feito usando uma máquina com Ubuntu 16.04 instalado, mas também deve funcionar em máquinas com sistemas Debian Based.
 
-## Resolução de problemas nos pacotes 
+## Resolução de problemas nos pacotes
 Ao logar na máquina, tive alguns problemas com pacotes quebrados. Para arrumar esse problema usei os comandos comandos do dpkg e do apt-get, respectivamente:
 
 ```
@@ -58,7 +58,7 @@ cd cmp_toy
 mkdir build
 cd build
 cmake ..
-make 
+make
 ```
 
 Agora que a instalação do software foi feita com sucesso, precisamos testá-lo. Para isso, basta ir para o diretório pai e rodar o script de teste, que usa uma imagem pronta para teste.
