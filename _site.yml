@@ -10,7 +10,7 @@ reflinks:
         url: http://openpower.ic.unicamp.br
         title: OpenPOEWR @ UNICAMP
     minicloud:
-        url: http://oplab134.parqtec.unicamp.br/minicloud
+        url: /minicloud/
         title: Minicloud
     openpower:
         url: http://openpowerfoundation.org
