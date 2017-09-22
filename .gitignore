@@ -57,3 +57,7 @@ target/
 
 #vim files
 *.swp
+.idea/
+cmake-build-debug/
+
+.gitignore
