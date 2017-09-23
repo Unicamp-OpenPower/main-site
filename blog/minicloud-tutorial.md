@@ -78,15 +78,15 @@ For other OSs, change the username accordingly:
     <th>Command</th>
   </tr>
   <tr>
-    <td>CentOS 7</td>
+    <td>CentOS</td>
     <td><div class="codehilite"><pre>ssh centos@177.220.10.134 -p 21023</pre></div></td>
   </tr>
   <tr>
-    <td>Debian 8</td>
+    <td>Debian</td>
     <td><div class="codehilite"><pre>ssh debian@177.220.10.134 -p 21023</pre></div></td>
   </tr>
   <tr>
-    <td>Fedora 	&lt;23,24&gt; &lt;LE,BE&gt;</td>
+    <td>Fedora</td>
     <td><div class="codehilite"><pre>ssh fedora@177.220.10.134 -p 21023</pre></div></td>
   </tr>
 </table>
