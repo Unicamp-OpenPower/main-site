@@ -45,3 +45,4 @@ Atendimento: Kelly Bassi – kelly.bassi@brodeur.com.br - (11) 3323-1603
 Gerente de Atendimento: Mariana Lima – mariana.lima@brodeur.com.br   - (11) 3323-1607
 Relacionamento com Imprensa – IBM
 Gerência: Vanessa Garcia Xavier - vaneg@br.ibm.com / (11) 2132-2218
+
