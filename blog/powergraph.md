@@ -156,6 +156,6 @@ Finally, the **D3-tip** library just inserts tooltips in the graph for a better 
 
 ## Conclusion  
 If you want to see the project working, acces this 
-[link](http://177.220.10.134/powergraph). If you want to contribute, acces the 
+[link](http://oplab134.parqtec.unicamp.br/powergraph). If you want to contribute, acces the 
 [github link](https://github.com/Unicamp-OpenPower/powergraph). Hope you all enjoy 
 it. Thanks a lot!

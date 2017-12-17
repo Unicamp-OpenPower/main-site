@@ -22,7 +22,7 @@ To install git, simply execute:
 
 Access Jenkins through http://localhost:8080 and follow the instructions for the initial setup. Choose **Install suggested plugins** when asked.
 
-<img src="./jenkins_images/plugins.png" width="100%"/>
+<img src="./building-a-continuous-integration-platform-using-jenkins-and-github-images/plugins.png" width="100%"/>
 
 # Step 2: Creating a job
 
@@ -54,7 +54,7 @@ Complete the job creating by adding a build step (e.g. a shell script to compile
 
 The test input and expected output should be in the repository.
 
-<img src="./jenkins_images/job_configuration.png" width="100%"/>
+<img src="./building-a-continuous-integration-platform-using-jenkins-and-github-images/job_configuration.png" width="100%"/>
 
 # Step 3: Configuring GitHub plugin - Skip if building periodically
 
@@ -64,13 +64,13 @@ A new sub-section will appear right above.
 
 Select **From login and password**, fill your login and password from GitHub and press **Create token credentials**
 
-<img src="./jenkins_images/create_token.png" width="100%"/>
+<img src="./building-a-continuous-integration-platform-using-jenkins-and-github-images/create_token.png" width="100%"/>
 
 Above this sub-section, click **Add GitHub server**. Keep the **API URL** unchanged.
 
 Under **Credentials** dropdown menu, select the token just created and test your connection.
 
-<img src="./jenkins_images/github_server.png" width="100%"/>
+<img src="./building-a-continuous-integration-platform-using-jenkins-and-github-images/github_server.png" width="100%"/>
 
 # Step 4: Testing it
 
@@ -115,7 +115,7 @@ Simply enter your host and create a credential using your username and password,
 
 Press **Save**
 
-<img src="./jenkins_images/slave_node.png" width="100%"/>
+<img src="./building-a-continuous-integration-platform-using-jenkins-and-github-images/slave_node.png" width="100%"/>
 
 ##Step 5.1: Restricting machines where projects can be run
 
@@ -123,6 +123,6 @@ If your slaves have different environments, your should restrict the machines wh
 
 Under the **project** settings, check **Restrict where this project can be run** and type the machine name, use a label, or even use a more complex rule using logical operators (click the **?** for more information)
 
-<img src="./jenkins_images/restrict_where_this_project_can_be_run.png" width="100%"/>
+<img src="./building-a-continuous-integration-platform-using-jenkins-and-github-images/restrict_where_this_project_can_be_run.png" width="100%"/>
 
 To prevent the master machine to run projects, go to **Manage Jenkins** → **Manage Nodes** → **master** → **Configure** → **# of executors** and set to 0.
