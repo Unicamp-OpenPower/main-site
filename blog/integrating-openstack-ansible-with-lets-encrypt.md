@@ -9,7 +9,7 @@ Deploying HTTPS is essential for security, and OpenStack Ansible does it by defa
 
 <center><img src="./integrating-openstack-ansible-with-lets-encrypt-images/browser-warning.png" width="80%" style="padding: 25px 0px"/></center>
 
-Let’s Encrypt requires your server to be validated before issuing the certificate. This means it will create a temporary file in your server and then try to access it from their servers, to verify that you control the domain you're trying to get a certificate to.
+Let’s Encrypt requires your server to be validated before issuing the certificate. This means it will create a temporary file on your server and then try to access it from their servers, to verify that you control the domain you're trying to get a certificate to.
 
 <center><img src="./integrating-openstack-ansible-with-lets-encrypt-images/lets-encrypt-validation.png" width="80%" style="padding: 25px 0px"/></center>
 
@@ -28,7 +28,7 @@ Install OpenStack as usual, without providing any certificates. Self-signed ones
 
 We will not actually create a web root. Since Let’s Encrypt only requires writing on `your-domain.com/.well-known` directory, we will create an alias to the `.well-known` path.
 
-Attach to the horizon container. Replace the container name accordingly to your setup. If you don’t know the name, run `lxc-ls | grep horizon` to get the container name.
+Attach to the horizon container. Replace the container name accordingly with your setup. If you don’t know the name, run `lxc-ls | grep horizon` to get the container name.
 
     # lxc-attach -n infra1_horizon_container-XXXXXXXX
 
@@ -53,7 +53,7 @@ Now install the Let’s Encrypt Certbot. The intention is to only get the certif
     # apt-get install certbot 
     # certbot certonly
 
-When asked to choose an authetication method, choose `2`
+When asked to choose an authentication method, choose `2`
 
 <div class="codehilite"><pre><span></span>How would you like to authenticate with the ACME CA?
 -------------------------------------------------------------------------------
@@ -117,7 +117,7 @@ Now **exit the container** and apply the new certificate:
 
 As Let’s Encrypt certificates are only valid for 90 days, it is highly advisable to schedule automatic renewing. We can do this using crontab inside the horizon container.
 
-Attach to the horizon container. Replace the container name accordingly to your setup. If you don’t know the name, run `lxc-ls | grep horizon` to get the container name.
+Attach to the horizon container. Replace the container name accordingly with your setup. If you don’t know the name, run `lxc-ls | grep horizon` to get the container name.
 
     # lxc-attach -n infra1_horizon_container-XXXXXXXX
 
