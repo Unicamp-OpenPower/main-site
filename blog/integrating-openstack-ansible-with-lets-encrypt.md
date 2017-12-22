@@ -5,6 +5,14 @@ date: 2017-12-17
 author: Guilherme Tiaki Sato
 ---
 
+<style>
+    [data-text] {
+    }
+    [data-text]::after {
+      content: attr(data-text);
+    }
+</style>
+
 Deploying HTTPS is essential for security, and OpenStack Ansible does it by default. However, if no certificates are provided, it will generate self-signed ones, which although are more secure than no SSL at all, it will trigger a warning when accessing the dashboard in the browser. Luckily, the Let’s Encrypt project provides signed SSL certificates for free.
 
 <center><img src="./integrating-openstack-ansible-with-lets-encrypt-images/browser-warning.png" width="80%" style="padding: 25px 0px"/></center>
@@ -30,15 +38,17 @@ We will not actually create a web root. Since Let’s Encrypt only requires writ
 
 Attach to the horizon container. Replace the container name accordingly with your setup. If you don’t know the name, run `lxc-ls | grep horizon` to get the container name.
 
-    # lxc-attach -n infra1_horizon_container-XXXXXXXX
+<div class="codehilite"><pre><span></span><span data-text="# "></span>lxc-attach -n infra1_horizon_container-XXXXXXXX
+</pre></div>
 
 Add the following line to `/etc/apache2/sites-enabled/openstack-dashboard.conf`, inside the `<VirtualHost *:80>` tag
     
     Alias /.well-known /var/www/html/.well-known 
 
 Restart the apache2 service:
-    
-    # service apache2 restart
+
+<div class="codehilite"><pre><span></span><span data-text="# "></span>service apache2 restart
+</pre></div>
 
 Now, we can use `/var/www/html` as our web root, at least from the Let’s Encrypt Certbot point of view.
 
@@ -46,12 +56,13 @@ Now, we can use `/var/www/html` as our web root, at least from the Let’s Encry
 
 Now install the Let’s Encrypt Certbot. The intention is to only get the certificates files, not configure them in Apache. Use the following commands to do so:
 
-    # apt-get update
-    # apt-get install software-properties-common
-    # add-apt-repository ppa:certbot/certbot
-    # apt-get update
-    # apt-get install certbot 
-    # certbot certonly
+<div class="codehilite"><pre><span></span><span data-text="# "></span>apt-get update
+<span data-text="# "></span>apt-get install software-properties-common
+<span data-text="# "></span>add-apt-repository ppa:certbot/certbot
+<span data-text="# "></span>apt-get update
+<span data-text="# "></span>apt-get install certbot 
+<span data-text="# "></span>certbot certonly
+</pre></div>
 
 When asked to choose an authentication method, choose `2`
 
@@ -79,37 +90,43 @@ After this, the certificate files will be placed on `/etc/letsencrypt/live/your-
 
 Generate an SSH key **inside the container**:
 
-    ssh-keygen -t rsa
+<div class="codehilite"><pre><span></span><span data-text="# "></span>ssh-keygen -t rsa
+</pre></div>
 
 Print the public key and copy it to the clipboard:
 
-    cat /root/.ssh/id_rsa.pub
+<div class="codehilite"><pre><span></span><span data-text="# "></span>cat /root/.ssh/id_rsa.pub
+</pre></div>
 
 Now append the container's public key to the authorized_keys file **in the host**:
 
-    echo [PASTE THE COPIED KEY HERE] >> /root/.ssh/authorized_keys
+<div class="codehilite"><pre><span></span><span data-text="# "></span>echo [PASTE THE COPIED KEY HERE] >> /root/.ssh/authorized_keys
+</pre></div>
 
 This will allow the container to copy the certificates to the host using `scp`.
 
 # Applying the certificates in HAProxy
 
 To use them in HAProxy, we must concatenate some files. Replace `your-domain.com` accordingly.
-
-    # cat /etc/letsencrypt/live/your-domain.com/privkey.pem > /etc/letsencrypt/live/your-domain.com/haproxy.key
-    # cat /etc/letsencrypt/live/your-domain.com/cert.pem /etc/letsencrypt/live/your-domain.com/chain.pem /etc/letsencrypt/live/your-domain.com/privkey.pem > /etc/letsencrypt/live/your-domain.com/haproxy.pem
+<div class="codehilite"><pre><span></span><span data-text="# "></span>cat /etc/letsencrypt/live/your-domain.com/privkey.pem > /etc/letsencrypt/live/your-domain.com/haproxy.key
+<span data-text="# "></span>cat /etc/letsencrypt/live/your-domain.com/cert.pem /etc/letsencrypt/live/your-domain.com/chain.pem /etc/letsencrypt/live/your-domain.com/privkey.pem > /etc/letsencrypt/live/your-domain.com/haproxy.pem
+</pre></div>
 
 Set the permissions properly:
 
-    # chmod 640 /etc/letsencrypt/live/your-domain.com/haproxy.key
-    # chmod 644 /etc/letsencrypt/live/your-domain.com/haproxy.pem
+<div class="codehilite"><pre><span></span><span data-text="# "></span>chmod 640 /etc/letsencrypt/live/your-domain.com/haproxy.key
+<span data-text="# "></span>chmod 644 /etc/letsencrypt/live/your-domain.com/haproxy.pem
+</pre></div>
 
 Still inside the horizon container, copy the files we just generated to the host. Replace `your-domain.com` and `HOST_IP_ADDRESS` accordingly.
 
-    # scp /etc/letsencrypt/live/your-domain.com/haproxy.* HOST_IP_ADDRESS:/etc/ssl/private
+<div class="codehilite"><pre><span></span><span data-text="# "></span>scp /etc/letsencrypt/live/your-domain.com/haproxy.* HOST_IP_ADDRESS:/etc/ssl/private
+</pre></div>
 
 Now **exit the container** and apply the new certificate:
 
-    # service haproxy reload
+<div class="codehilite"><pre><span></span><span data-text="# "></span>service haproxy reload
+</pre></div>
 
 <center><img src="./integrating-openstack-ansible-with-lets-encrypt-images/secure.png" width="60%" style="padding: 10px 0px 0px 0px"/></center>
 
@@ -119,11 +136,13 @@ As Let’s Encrypt certificates are only valid for 90 days, it is highly advisab
 
 Attach to the horizon container. Replace the container name accordingly with your setup. If you don’t know the name, run `lxc-ls | grep horizon` to get the container name.
 
-    # lxc-attach -n infra1_horizon_container-XXXXXXXX
+<div class="codehilite"><pre><span></span><span data-text="# "></span>lxc-attach -n infra1_horizon_container-XXXXXXXX
+</pre></div>
 
 Open the crontab editor:
 
-    # crontab -e
+<div class="codehilite"><pre><span></span><span data-text="# "></span>crontab -e
+</pre></div>
 
 Place this line at the end of the file, replacing `your-domain.com` and `HOST_IP_ADDRESS` accordingly.
 
