@@ -16,23 +16,20 @@ Before installing TensorFlow, there are a couple of details we have to pay atten
 # Tensorflow Dependencies
 You can use the commands below to solve most of the dependencies:
 
-<div class="codehilite"><pre><span></span>
-<span data-text="# "></span>apt-get update
+<div class="codehilite"><pre><span></span><span data-text="# "></span>apt-get update
 <span data-text="# "></span>apt-get install python-numpy python-dev python-pip python-wheel
 </pre></div>
 
 # Bazel installation
 Bazel is one of the TF dependencies, but its installation is less intuitive than the others due to its community does not officially support POWER architecture. That said, we must compile it from the Source. First of all, we need to install its own dependencies by the following commands:
 
-<div class="codehilite"><pre><span></span>
-<span data-text="# "></span>apt-get update
+<div class="codehilite"><pre><span></span><span data-text="# "></span>apt-get update
 <span data-text="# "></span>apt-get install unzip openjdk-8-jdk protobuf-compiler zip g++ zlib1g-dev
 </pre></div>
 
 It is also important to add enviroment variables on .bashrc for JDK.
 
-<div class="codehilite"><pre><span></span>
-<span data-text="# "></span>vi .bashrc
+<div class="codehilite"><pre><span></span><span data-text="# "></span>vi .bashrc
 	export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-ppc64el
 	export JRE_HOME=${JAVA_HOME}/jre
 	export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
@@ -41,8 +38,7 @@ It is also important to add enviroment variables on .bashrc for JDK.
 
 For compiling Bazel, we are going to download and unpack its distribution archive (the zip file from the release page https://github.com/bazelbuild/bazel/releases. The .sh is not compatible with ppc64le) and compile it.
 
-<div class="codehilite"><pre><span></span>
-<span data-text="# "></span>mkdir bazel
+<div class="codehilite"><pre><span></span><span data-text="# "></span>mkdir bazel
 <span data-text="# "></span>cd bazel
 <span data-text="# "></span>wget -c https://github.com/bazelbuild/bazel/releases/download/0.9.0/bazel-0.9.0-dist.zip #if you want to download other version of bazel, this link must be switched by the one you are intenting to use.
 <span data-text="# "></span>unzip bazel-0.9.0-dist.zip
@@ -55,8 +51,7 @@ As we can see, this tutorial was tested with bazel 0.9.0, but feel free to try o
 
 Since we are going to use the current version of TF, we need to clone it from the official GitHub and execute the configuration script.
 
-<div class="codehilite"><pre><span></span>
-<span data-text="# "></span>git clone https://github.com/tensorflow/tensorflow
+<div class="codehilite"><pre><span></span><span data-text="# "></span>git clone https://github.com/tensorflow/tensorflow
 <span data-text="# "></span>cd ~/tensorflow
 <span data-text="# "></span>./configure
 </pre></div>
@@ -79,10 +74,9 @@ Configuration finished
 
 To build and install TF, we use:
 
-<div class="codehilite"><pre><span></span>
-<span data-text="# "></span>bazel build --copt="-mcpu=native" --jobs 1 --local_resources 2048,0.5,1.0 //tensorflow/tools/pip_package:build_pip_package
-<span data-text="# "></span> bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg #creates the pip package
-<span data-text="# "></span>$ sudo pip install /tmp/tensorflow_pkg/tensorflow-1.5.0rc0-cp27-cp27mu-linux_ppc64le.whl #installs the pip package. This name depends on your operating system, Python version and CPU only vs. GPU support. Therefore, check it out its name before this step.
+<div class="codehilite"><pre><span></span><span data-text="# "></span>bazel build --copt="-mcpu=native" --jobs 1 --local_resources 2048,0.5,1.0 //tensorflow/tools/pip_package:build_pip_package
+<span data-text="# "></span>bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg #creates the pip package
+<span data-text="# "></span>pip install /tmp/tensorflow_pkg/tensorflow-1.5.0rc0-cp27-cp27mu-linux_ppc64le.whl #installs the pip package. This name depends on your operating system, Python version and CPU only vs. GPU support. Therefore, check it out its name before this step.
 </pre></div>
 
 By this moment, your TF must be working. Remember not to import it into its own directory: you have to chance directory before execute Python.
