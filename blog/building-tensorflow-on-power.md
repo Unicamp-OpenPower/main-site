@@ -5,14 +5,6 @@ date: 2018-01-16
 author: Nathalia Harumi Kuromiya
 ---
 
-<style>
-    [data-text] {
-    }
-    [data-text]::after {
-      content: attr(data-text);
-    }
-</style>
-
 TensorFlow is a widespread software library for numerical computation using data flow graphs. It is very common on machine learning and deep neural networks projects. Therefore, today we are going to see how to install it on POWER with CPU only configuration.  
 
 <center><img src="./building-tensorflow-on-power-images/tf-logo.png" style="padding: 25px 0px"/></center>
@@ -21,7 +13,7 @@ Before installing TensorFlow, there are a couple of details we have to pay atten
 1. Due to Bazel, one of TF dependencies, the operating system must be Ubuntu 14.04 or Ubuntu 16.04.
 2. We are going to use Python 2.7, since TF doesn't seem to be supported by Python 3.5 <strong>on POWER</strong>.
 
-#Tensorflow Dependencies
+# Tensorflow Dependencies
 You can use the commands below to solve most of the dependencies:
 
 <div class="codehilite"><pre><span></span>
@@ -29,7 +21,7 @@ You can use the commands below to solve most of the dependencies:
 <span data-text="# "></span>apt-get install python-numpy python-dev python-pip python-wheel
 </pre></div>
 
-#Bazel installation
+# Bazel installation
 Bazel is one of the TF dependencies, but its installation is less intuitive than the others due to its community does not officially support POWER architecture. That said, we must compile it from the Source. First of all, we need to install its own dependencies by the following commands:
 
 <div class="codehilite"><pre><span></span>
@@ -52,14 +44,14 @@ For compiling Bazel, we are going to download and unpack its distribution archiv
 <div class="codehilite"><pre><span></span>
 <span data-text="# "></span>mkdir bazel
 <span data-text="# "></span>cd bazel
-<span data-text="# "></span>$ wget -c https://github.com/bazelbuild/bazel/releases/download/0.9.0/bazel-0.9.0-dist.zip #if you want to download other version of bazel, this link must be switched by the one you are intenting to use.
+<span data-text="# "></span>wget -c https://github.com/bazelbuild/bazel/releases/download/0.9.0/bazel-0.9.0-dist.zip #if you want to download other version of bazel, this link must be switched by the one you are intenting to use.
 <span data-text="# "></span>unzip bazel-0.9.0-dist.zip
 <span data-text="# "></span>./compile.sh
 </pre></div>
 
 As we can see, this tutorial was tested with bazel 0.9.0, but feel free to try other version and see if it works properly.
 
-#Installing Tensorflow
+# Installing Tensorflow
 
 Since we are going to use the current version of TF, we need to clone it from the official GitHub and execute the configuration script.
 
@@ -71,7 +63,7 @@ Since we are going to use the current version of TF, we need to clone it from th
 
 On this step, we have to specify the pathname of all relevant TF dependencies and other build configuration options. On most of them we can use the answers suggested on each question. Here, I will show how it was done for this tutorial. (Yours might be a little different, depending on the pathnames)
 
-<div class="codehilite"><pre><span></span>Please specify the location of python. [Default is /usr/bin/python]: <strong>/usr/bin/python2.7<strong>
+<div class="codehilite"><pre><span></span>Please specify the location of python. [Default is /usr/bin/python]: <strong>/usr/bin/python2.7</strong>
 Found possible Python library paths:
   /usr/local/lib/python2.7/dist-packages
   /usr/lib/python2.7/dist-packages
@@ -95,7 +87,7 @@ To build and install TF, we use:
 
 By this moment, your TF must be working. Remember not to import it into its own directory: you have to chance directory before execute Python.
 
-#Build Issues and Support Websites:
+# Build Issues and Support Websites:
 
 While testing this tutorial, I could separate some useful issues reports and links to help some of the troubles you might have on the way.
 
