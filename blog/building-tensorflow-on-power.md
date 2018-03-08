@@ -21,7 +21,7 @@ You can use the commands below to solve most of the dependencies:
 </pre></div>
 
 # Bazel installation
-Bazel is one of the TF dependencies, but its installation is less intuitive than the others due to its community does not officially support POWER architecture. That said, we must compile it from the Source. First of all, we need to install its own dependencies by the following commands:
+Bazel is one of the TF dependencies, but its installation is less intuitive than the others due to its community not officially supporting POWER architecture. That said, we must compile it from the Source. First of all, we need to install its own dependencies by the following commands:
 
 <div class="codehilite"><pre><span></span><span data-text="# "></span>apt-get update
 <span data-text="# "></span>apt-get install unzip openjdk-8-jdk protobuf-compiler zip g++ zlib1g-dev
@@ -79,7 +79,7 @@ To build and install TF, we use:
 <span data-text="# "></span>pip install /tmp/tensorflow_pkg/tensorflow-1.5.0rc0-cp27-cp27mu-linux_ppc64le.whl #installs the pip package. This name depends on your operating system, Python version and CPU only vs. GPU support. Therefore, check it out its name before this step.
 </pre></div>
 
-By this moment, your TF must be working. Remember not to import it into its own directory: you have to chance directory before execute Python.
+By this moment, your TF must be working. Remember not to import it into its own directory: you have to chance directory before executing Python.
 
 # Build Issues and Support Websites:
 
