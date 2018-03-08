@@ -5,6 +5,14 @@ date: 2018-01-16
 author: Nathalia Harumi Kuromiya
 ---
 
+<style>
+    [data-text] {
+    }
+    [data-text]::after {
+      content: attr(data-text);
+    }
+</style>
+
 TensorFlow is a widespread software library for numerical computation using data flow graphs. It is very common on machine learning and deep neural networks projects. Therefore, today we are going to see how to install it on POWER with CPU only configuration.  
 
 <center><img src="./building-tensorflow-on-power-images/tf-logo.png" style="padding: 25px 0px"/></center>
