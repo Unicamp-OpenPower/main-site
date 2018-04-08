@@ -48,12 +48,14 @@ For compiling Bazel, we are going to download and unpack its distribution archiv
 
 <div class="codehilite"><pre><span></span><span data-text="# "></span>mkdir bazel
 <span data-text="# "></span>cd bazel
-<span data-text="# "></span>wget -c https://github.com/bazelbuild/bazel/releases/download/0.9.0/bazel-0.9.0-dist.zip #if you want to download other version of bazel, this link must be switched by the one you are intenting to use.
-<span data-text="# "></span>unzip bazel-0.9.0-dist.zip
+<span data-text="# "></span>wget -c https://github.com/bazelbuild/bazel/releases/download/0.9.0/bazel-0.11.1-dist.zip #if you want to download other version of bazel, this link must be switched by the one you are intenting to use.
+<span data-text="# "></span>unzip bazel-0.11.1-dist.zip
 <span data-text="# "></span>./compile.sh
 </pre></div>
 
-As we can see, this tutorial was tested with bazel 0.9.0, but feel free to try other version and see if it works properly.
+As we can see, this tutorial was tested with bazel 0.11.1, but feel free to try other version and see if it works properly.
+
+Also, if you are having any trouble about lack of resources, you can take a look on 'Build issues and Support Websites' to see if there's any link that could help you. Anticipating: if you don't have memory enough and your Bazel can't complete the compile step, you might have a problem with the garbage collector of JAVA (and there's a link which explains how to deal with it).
 
 # Installing Tensorflow
 
@@ -99,3 +101,4 @@ While testing this tutorial, I could separate some useful issues reports and lin
 4. https://docs.bazel.build/versions/master/install-compile-source.html An official tutorial about how to install Bazel from Sources.
 5. https://www.ibm.com/developerworks/community/blogs/fe313521-2e95-46f2-817d-44a4f27eba32/entry/Building_TensorFlow_on_OpenPOWER_Linux_Systems?lang=en IBM source about Tensorflow installation. Provides interesting information about bazel installation on PPC and how to install TF with GPU support. It also points to an IBM Bazel modified to PPC (which we are not using in this tutorial, but you can take a look on it).
 6. https://github.com/tensorflow/tensorflow/issues/7979#issuecomment-283559640 An issue about enviroment variables: on the configuration step, if it does not recognize some of the TF variables, this might help you to solve the problem.
+7. https://github.com/bazelbuild/bazel/issues/1308 An issue about Bazel: "The system is out of resources". You might need to add a command line on compile file to change the garbage collector size. On the issue on git, it's suggested to change it to 384, but, at least on one of the computers I tried to compile, I needed to change it to 512 (in other words, change -J-Xmx384m on the solution line to -J-Xmx512m). It's important to see that ideally we should not have to change the source code, but it solves the problem. Another option is to increase the memory of your system if it's possible (recommended).
