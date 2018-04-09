@@ -48,7 +48,7 @@ For compiling Bazel, we are going to download and unpack its distribution archiv
 
 <div class="codehilite"><pre><span></span><span data-text="# "></span>mkdir bazel
 <span data-text="# "></span>cd bazel
-<span data-text="# "></span>wget -c https://github.com/bazelbuild/bazel/releases/download/0.9.0/bazel-0.11.1-dist.zip #if you want to download other version of bazel, this link must be switched by the one you are intenting to use.
+<span data-text="# "></span>wget -c https://github.com/bazelbuild/bazel/releases/download/0.11.1/bazel-0.11.1-dist.zip #if you want to download other version of bazel, this link must be switched by the one you are intenting to use.
 <span data-text="# "></span>unzip bazel-0.11.1-dist.zip
 <span data-text="# "></span>./compile.sh
 </pre></div>
