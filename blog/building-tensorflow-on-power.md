@@ -32,7 +32,7 @@ You can use the commands below to solve most of the dependencies:
 Bazel is one of the TF dependencies, but its installation is less intuitive than the others due to its community not officially supporting POWER architecture. That said, we must compile it from the Source. First of all, we need to install its own dependencies by the following commands:
 
 <div class="codehilite"><pre><span></span><span data-text="# "></span>apt-get update
-<span data-text="# "></span>apt-get install unzip openjdk-8-jdk protobuf-compiler zip g++ zlib1g-dev
+<span data-text="# "></span>apt-get install unzip build-essential python openjdk-8-jdk protobuf-compiler zip g++ zlib1g-dev
 </pre></div>
 
 It is also important to add enviroment variables on .bashrc for JDK.
