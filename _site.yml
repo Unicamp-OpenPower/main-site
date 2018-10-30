@@ -12,6 +12,9 @@ reflinks:
     minicloud:
         url: /minicloud/
         title: Minicloud
+    ftp:
+        url: https://oplab9.parqtec.unicamp.br/
+        title: FTP
     openpower:
         url: http://openpowerfoundation.org
         title: OpenPOWER Foundation
