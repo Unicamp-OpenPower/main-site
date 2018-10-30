@@ -9,6 +9,7 @@ content:
     - videos
     - blog
     - minicloud
+    - ftp
     - OpenPOWER
 tagline:
     The home of OpenPOWER projects @ UNICAMP
