@@ -25,7 +25,7 @@ sudo chmod a-w /var/www/html
 ```
 
 
-# HTTP Server (Apache)
+# HTTP Server (apache)
 
 We intend that our files can be accessed through a web browser. In that case, we will need a HTTP Server, like Apache.
 
@@ -164,7 +164,7 @@ Install the package `quota` with the following command:
 ```
 sudo apt install quota
 ```
-# Configuration
+## Configuration
 Edit the `fstab` file and add `usrquota` option in the partition you chose earlier:
 ```
 sudo nano /etc/fstab
@@ -188,7 +188,9 @@ After that, you will need to edit the quota of `ftpuser` with this command:
 sudo edquota ftpuser
 ```
 Put the values of soft and hard quota in these columns.
+
 Example: 10GB: 10000000 and 10485760 in block quota session.
+
 Let 0 if you don't want to have a limit.
 
 Set the default quota user as `ftpuser` to copy a quota for the new users:
@@ -198,9 +200,9 @@ sudo sed -i -e 's/.*QUOTAUSER="".*/QUOTAUSER="ftpuser"/' /etc/adduser.conf
 
 ## Commands
 There are a few commands useful for controlling the quota:
-* `quota user` shows the `user` quota
-* `repquota -a` shows the general quota report
-* `edquota user` to edit `user` quota
+- `quota user` shows the `user` quota.
+- `repquota -a` shows the general quota report.
+- `edquota user` to edit `user` quota.
 
 
 # Access List (acl)
@@ -244,8 +246,9 @@ sudo ./create_user.sh 'user' 'pass' 'directory'
 ```
 
 **Directory instructions:**
-* for the root of FTP directory, use ```.```
-* for other directories, don't write the initial and final slashes (ex: ppc64el/debian for /www/html/pub/ppc64el/debian/)
+
+- for the root of FTP directory, use ```.``` .
+- for other directories, don't write the initial and final slashes (ex: ppc64el/debian for /www/html/pub/ppc64el/debian/).
 
 Should any problem with file permissions ocurr, use the ```fix_acl.sh``` script, that will remake the permissions based on ```acl.list``` file.
 
@@ -264,9 +267,9 @@ sudo ./fix_acl.sh
 
 # References
 
-[https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-16-04]
-[https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server]
-[https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-a-user-s-directory-on-ubuntu-16-04]
+- <https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-16-04>
+- <https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server>
+- <https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-a-user-s-directory-on-ubuntu-16-04>
 
 
 *Post written by [Luciano Zago](https://github.com/lcnzg).*
