@@ -24,7 +24,7 @@ Bazel must have Power support in the future, making its installation possible th
 ------------
 # Building Bazel from scratch (bootstrapping)
 
-Here we will see how to do self-compilation. If you use Ubuntu 14.04 or Ubuntu 16.04 in ppc64le, you can skip right to: [Using ready binaries](#ready "Using ready binaries").
+Here we will see how to do self-compilation. If you are using Ubuntu 14.04 or Ubuntu 16.04 in ppc64le, you can skip right to: [Using ready binaries](#ready "Using ready binaries").
 
 * **First, install the prerequisites:**  
 Pkg-config  
@@ -42,7 +42,7 @@ sudo apt-get install pkg-config zip unzip g++ zlib1g-dev openjdk-8-jdk python
 
 <br>  
 
-* **Next, download the Bazel binary installer named bazel-<version>-installer-linux-x86_64.sh from the Bazel releases page on GitHub:**    <https://github.com/bazelbuild/bazel/releases>
+* **Next, download the Bazel binary installer named bazel-<version>-dist.zip from the [Bazel releases page on GitHub](https://github.com/bazelbuild/bazel/releases):**  
   
 ```
 wget https://github.com/bazelbuild/bazel/releases/download/<version>/bazel-<version>-dist.zip
@@ -104,8 +104,8 @@ We have released the last 10 versions of Bazel already compiled in this link: <h
 
 * **Download the desired version:**
 ```
-wget https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/bazel_bin_<VERSION>
-sudo mv bazel_bin_<VERSION> bazel
+wget https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/bazel_bin_<version>
+sudo mv bazel_bin_<version> bazel
 sudo chmod +x bazel
 ```
 
