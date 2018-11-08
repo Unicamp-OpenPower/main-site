@@ -1,5 +1,5 @@
 ---
-title: Installing Bazel on PowerPC and Other Unsupported Architectures/Systems
+title: Installing Bazel on Power and Other Unsupported Architectures/Systems
 layout: page
 date: 2018-11-07
 author: Gustavo Salibi
@@ -15,7 +15,7 @@ It uses a human-readable, high-level build language. Bazel supports projects in 
 
 In designing Bazel, emphasis has been placed on build speed, correctness, and reproducibility. The tool uses parallelization to speed up parts of the build process. It includes a Bazel Query language that can be used to analyze build dependencies in complex build graphs
 
-Bazel must have PowerPC support in the future, making its installation possible through community-supported methods. However, currently, if you want to install on PowerPC or other architectures or systems that do not have support, you need compiling Bazel from source.
+Bazel must have Power support in the future, making its installation possible through community-supported methods. However, currently, if you want to install on Power or other architectures or systems that do not have support, you need compiling Bazel from source.
 
 So let's see how to install Bazel on architectures and systems not officially supported. I will use Ubuntu 14.04 as the basis of this tutorial, but it can be easily adapted to other Linux systems.
 
