@@ -35,7 +35,7 @@ sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update  
 sudo apt-get install pkg-config zip unzip g++ zlib1g-dev openjdk-8-jdk python  
 ```
-* **Next, download the Bazel binary installer named bazel-<version>-installer-linux-x86_64.sh from the Bazel releases page on GitHub:**    https://github.com/bazelbuild/bazel/releases
+* **Next, download the Bazel binary installer named bazel-<version>-installer-linux-x86_64.sh from the Bazel releases page on GitHub:**    <https://github.com/bazelbuild/bazel/releases>
   
 ```
 wget https://github.com/bazelbuild/bazel/releases/download/<version>/bazel-<version>-dist.zip
@@ -55,9 +55,9 @@ unzip bazel-<version>-dist.zip
 ```
 bash ./compile.sh
 ```
-This may take several minutes...
+<div id="ready">This may take several minutes...</div>
 
-<div id="ready"></div>
+------------
 
 # Using ready binaries
 
@@ -74,7 +74,7 @@ sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update
 sudo apt-get install openjdk-8-jdk
 ```
-We have released the last 10 versions of Bazel already compiled in this link: https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/
+We have released the last 10 versions of Bazel already compiled in this link: <https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/>
 
 * **Download the desired version:**
 ```
@@ -83,6 +83,7 @@ sudo mv bazel_bin_<VERSION> bazel
 sudo chmod +x bazel
 ```
 
+------------
 
 # Installing Bazel
 
@@ -105,8 +106,14 @@ From now on, Bazel is installed and to use it simply use the command:
 bazel <command> <options>
 ```
 
+------------
+
 ### References  
 * https://docs.bazel.build/
 
+------------
 
 *Written by [Gustavo Salibi](https://github.com/GustavoStorti).*
+
+
+<rigth>teste</right>
