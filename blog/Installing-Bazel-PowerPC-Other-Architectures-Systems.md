@@ -5,7 +5,7 @@ date: 2018-11-07
 author: Gustavo Salibi
 ---
 
-<img src="./bazel-tutorial-img/bazel-logo.svg" alt="Bazel Logo" aling="middle">
+<center><img src="./bazel-tutorial-img/bazel-logo.svg" alt="Bazel Logo" aling="middle"/></center>
 
 Bazel is a free software tool that allows for the automation of building and testing of software. Similar to build tools like Make, Maven, and Gradle, Bazel builds software applications from source code using a set of rules.
 
