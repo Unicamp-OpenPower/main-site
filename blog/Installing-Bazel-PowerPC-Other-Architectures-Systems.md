@@ -66,6 +66,9 @@ unzip bazel-<version>-dist.zip
 ```
 bash ./compile.sh
 ```
+
+<br>
+
 <div id="ready">This may take several minutes...</div>
 
 <br>
