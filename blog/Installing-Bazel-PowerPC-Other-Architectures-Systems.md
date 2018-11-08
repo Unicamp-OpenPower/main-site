@@ -115,10 +115,14 @@ or
 sudo mv bazel /usr/local/bin
 ```
 
+<br>
+
 When using Bazel for the first time, it will extract the installation and prepare everything. To do this, simply use the command:  
 ```
 bazel
 ```
+
+<br>
 
 From now on, Bazel is installed and to use it simply use the command:
 ```
@@ -128,7 +132,7 @@ bazel <command> <options>
 ------------
 
 ### References  
-* https://docs.bazel.build/
+* <https://docs.bazel.build/>
 <br>
 ------------
 
