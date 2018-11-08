@@ -7,6 +7,8 @@ author: Gustavo Salibi
 
 <center><img src="./bazel-tutorial-img/bazel-logo.svg" alt="Bazel Logo" width="40%"/></center>
 
+<br>
+
 Bazel is a free software tool that allows for the automation of building and testing of software. Similar to build tools like Make, Maven, and Gradle, Bazel builds software applications from source code using a set of rules.
 
 It uses a human-readable, high-level build language. Bazel supports projects in multiple languages and builds outputs for multiple platforms and supports large codebases across multiple repositories, and large numbers of users.
@@ -17,7 +19,9 @@ Bazel must have PowerPC support in the future, making its installation possible 
 
 So let's see how to install Bazel on architectures and systems not officially supported. I will use Ubuntu 14.04 as the basis of this tutorial, but it can be easily adapted to other Linux systems.
 
+<br><br>
 
+------------
 # Building Bazel from scratch (bootstrapping)
 
 Here we will see how to do self-compilation. If you use Ubuntu 14.04 or Ubuntu 16.04 in ppc64le, you can skip right to: [Using ready binaries](#ready "Using ready binaries").
@@ -35,6 +39,9 @@ sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update  
 sudo apt-get install pkg-config zip unzip g++ zlib1g-dev openjdk-8-jdk python  
 ```
+
+<br>  
+
 * **Next, download the Bazel binary installer named bazel-<version>-installer-linux-x86_64.sh from the Bazel releases page on GitHub:**    <https://github.com/bazelbuild/bazel/releases>
   
 ```
@@ -44,11 +51,15 @@ There is a single architecture-independent distribution archive. There are no ar
 
 You have to use the distribution archive to bootstrap Bazel. You cannot use a source tree cloned from GitHub (the distribution archive contains generated source files that are required for bootstrapping and are not part of the normal Git source tree).
 
+<br>
+
 * **Unpack the zip file somewhere on disk:**
 
 ```
 unzip bazel-<version>-dist.zip
 ```
+
+<br>
 
 * **Run the compilation script:**
 
@@ -56,6 +67,8 @@ unzip bazel-<version>-dist.zip
 bash ./compile.sh
 ```
 <div id="ready">This may take several minutes...</div>
+
+<br>
 
 ------------
 
@@ -68,6 +81,8 @@ Make sure you have the JDK 8 installed:
 java -version
 ```
 
+<br>
+
 * **If you do not have it, you need to install it:**  
 ```
 sudo add-apt-repository ppa:openjdk-r/ppa
@@ -76,12 +91,16 @@ sudo apt-get install openjdk-8-jdk
 ```
 We have released the last 10 versions of Bazel already compiled in this link: <https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/>
 
+<br>
+
 * **Download the desired version:**
 ```
 wget https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/bazel_bin_<VERSION>
 sudo mv bazel_bin_<VERSION> bazel
 sudo chmod +x bazel
 ```
+
+<br>
 
 ------------
 
@@ -105,15 +124,12 @@ From now on, Bazel is installed and to use it simply use the command:
 ```
 bazel <command> <options>
 ```
-
+<br>
 ------------
 
 ### References  
 * https://docs.bazel.build/
-
+<br>
 ------------
 
 *Written by [Gustavo Salibi](https://github.com/GustavoStorti).*
-
-
-<rigth>teste</right>
