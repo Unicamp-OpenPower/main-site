@@ -73,7 +73,8 @@ bash ./compile.sh
 
 <br>
 
-<div id="ready">This should be the output:</div>    
+<div id="ready">This should be the output:  </div> 
+
 <img src="./bazel-tutorial-img/build-successful.png" alt="Bazel Logo" width="80%"/>
 
 <br>
