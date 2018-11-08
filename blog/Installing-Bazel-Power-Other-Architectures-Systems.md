@@ -17,7 +17,7 @@ In designing Bazel, emphasis has been placed on build speed, correctness, and re
 
 Bazel must have Power support in the future, making its installation possible through community-supported methods. However, currently, if you want to install on Power or other architectures or systems that do not have support, you need compiling Bazel from source.
 
-So let's see how to install Bazel on architectures and systems not officially supported. I will use Ubuntu 14.04 as the basis of this tutorial, but it can be easily adapted to other Linux systems.
+<div id="building">So let's see how to install Bazel on architectures and systems not officially supported. I will use Ubuntu 14.04 as the basis of this tutorial, but it can be easily adapted to other Linux systems.</div>
 
 <br><br>
 
@@ -137,7 +137,20 @@ From now on, Bazel is installed and to use it simply use the command:
 ```
 bazel <command> <options>
 ```
+
 <br>
+
+------------
+
+# Using Bazel to compile Bazel
+
+Once installed, you can use Bazel itself to compile a new version. To do this, simply download the desired version (as seen in [Building Bazel from scratch](#building "Building Bazel from scratch")) or even the developing version on [GitHub](https://github.com/bazelbuild/bazel) and use the following command in the directory of the downloaded files:
+```
+Bazel build //src:bazel
+```
+
+<br>
+
 ------------
 
 ### References  
