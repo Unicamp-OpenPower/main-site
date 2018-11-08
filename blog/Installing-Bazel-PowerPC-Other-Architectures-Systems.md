@@ -70,6 +70,11 @@ bash ./compile.sh
 
 <br>
 
+This should be the output:  
+<center><img src="./bazel-tutorial-img/build-successful.png" alt="Bazel Logo" width="70%"/></center>
+
+<br>
+
 ------------
 
 # Using ready binaries
