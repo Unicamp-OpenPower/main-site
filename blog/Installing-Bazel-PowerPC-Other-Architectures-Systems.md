@@ -69,11 +69,11 @@ bash ./compile.sh
 
 <br>
 
-<div id="ready">This may take several minutes...</div>
+*This may take several minutes...*
 
 <br>
 
-This should be the output:  
+<div id="ready">This should be the output:</div>    
 <img src="./bazel-tutorial-img/build-successful.png" alt="Bazel Logo" width="80%"/>
 
 <br>
