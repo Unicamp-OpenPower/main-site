@@ -45,7 +45,7 @@ Python (versions 2 and 3 are supported, installing one of them is enough)
 * **Next, download the Bazel binary installer named bazel-<version>-dist.zip from the [Bazel releases page on GitHub](https://github.com/bazelbuild/bazel/releases):**  
   
 ```
-wget https://github.com/bazelbuild/bazel/releases/download/<version>/bazel-<version>-dist.zip
+  wget https://github.com/bazelbuild/bazel/releases/download/<version>/bazel-<version>-dist.zip
 ```
 There is a single architecture-independent distribution archive. There are no architecture-specific or OS-specific distribution archives.
 
@@ -56,7 +56,7 @@ You have to use the distribution archive to bootstrap Bazel. You cannot use a so
 * **Unpack the zip file somewhere on disk:**
 
 ```
-unzip bazel-<version>-dist.zip
+  unzip bazel-<version>-dist.zip
 ```
 
 <br>
@@ -64,7 +64,7 @@ unzip bazel-<version>-dist.zip
 * **Run the compilation script:**
 
 ```
-bash ./compile.sh
+  bash ./compile.sh
 ```
 
 <br>
@@ -87,7 +87,7 @@ If you are using Ubuntu 14.04 or Ubuntu 16.04 in ppc64le, you can use our alread
 
 Make sure you have the JDK 8 installed:  
 ```
-java -version
+  java -version
 ```
 
 <br>
@@ -104,7 +104,7 @@ We have released the last 10 versions of Bazel already compiled in this link: <h
 
 * **Download the desired version:**
 ```
-wget https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/bazel_bin_<version>
+  wget https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/bazel_bin_<version>
 # mv bazel_bin_<version> bazel
 # chmod +x bazel
 ```
@@ -128,14 +128,14 @@ or
 
 When using Bazel for the first time, it will extract the installation and prepare everything. To do this, simply use the command:  
 ```
-bazel
+  bazel
 ```
 
 <br>
 
 From now on, Bazel is installed and to use it simply use the command:
 ```
-bazel <command> <options>
+  bazel <command> <options>
 ```
 
 <br>
@@ -146,7 +146,7 @@ bazel <command> <options>
 
 Once installed, you can use Bazel itself to compile a new version. To do this, simply download the desired version (as seen in [Building Bazel from scratch](#building "Building Bazel from scratch")) or even the developing version on [GitHub](https://github.com/bazelbuild/bazel) and use the following command in the directory of the downloaded files:
 ```
-Bazel build //src:bazel
+  Bazel build //src:bazel
 ```
 
 <br>
