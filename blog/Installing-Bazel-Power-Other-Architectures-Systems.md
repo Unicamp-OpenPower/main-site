@@ -35,9 +35,9 @@ JDK 8 (you must install version 8 of the JDK. Versions other than 8 are not supp
 Python (versions 2 and 3 are supported, installing one of them is enough)  
 
 ```
-sudo add-apt-repository ppa:openjdk-r/ppa  
-sudo apt-get update  
-sudo apt-get install pkg-config zip unzip g++ zlib1g-dev openjdk-8-jdk python  
+# add-apt-repository ppa:openjdk-r/ppa  
+# apt-get update  
+# apt-get install pkg-config zip unzip g++ zlib1g-dev openjdk-8-jdk python  
 ```
 
 <br>  
@@ -94,9 +94,9 @@ java -version
 
 * **If you do not have it, you need to install it:**  
 ```
-sudo add-apt-repository ppa:openjdk-r/ppa
-sudo apt-get update
-sudo apt-get install openjdk-8-jdk
+# add-apt-repository ppa:openjdk-r/ppa
+# apt-get update
+# apt-get install openjdk-8-jdk
 ```
 We have released the last 10 versions of Bazel already compiled in this link: <https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/>
 
@@ -105,8 +105,8 @@ We have released the last 10 versions of Bazel already compiled in this link: <h
 * **Download the desired version:**
 ```
 wget https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/bazel_bin_<version>
-sudo mv bazel_bin_<version> bazel
-sudo chmod +x bazel
+# mv bazel_bin_<version> bazel
+# chmod +x bazel
 ```
 
 <br>
@@ -117,11 +117,11 @@ sudo chmod +x bazel
 
 Finally, the compiled output is placed into output/bazel (or it is in the current directory if you have downloaded the binary). This is a self-contained Bazel binary, without an embedded JDK. You can copy it anywhere or use it in-place. For convenience we recommend copying this binary to a directory that's on your PATH (such as /usr/local/bin on Linux).  
 ```
-sudo mv output/bazel /usr/local/bin
+# mv output/bazel /usr/local/bin
 ```
 or  
 ```
-sudo mv bazel /usr/local/bin
+# mv bazel /usr/local/bin
 ```
 
 <br>
