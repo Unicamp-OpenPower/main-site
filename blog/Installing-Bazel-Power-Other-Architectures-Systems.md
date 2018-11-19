@@ -104,7 +104,7 @@ We have released the last 10 versions of Bazel already compiled in this link: <h
 
 * **Download the desired version:**
 ```
-  wget https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/bazel_bin_<version>
+  wget https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/ubuntu_<version>/bazel_bin_<version>
 # mv bazel_bin_<version> bazel
 # chmod +x bazel
 ```
@@ -128,7 +128,6 @@ or
 
 When using Bazel for the first time, it will extract the installation and prepare everything. To do this, simply use the command:  
 ```
-  bazel
 ```
 
 <br>
