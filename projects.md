@@ -13,6 +13,8 @@ Our infrastructure is being used to validate several Open Source projects
 |Project Name| Description|
 |---|---|
 
+| Bazel | Bazel is a free software tool that allows for the automation of building and testing of software. Similar to build tools like Make, Maven, and Gradle, Bazel builds software applications from source code using a set of rules. [Click here](https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel) to access the ppc64le binaries.
+
 <!---  *********** OLD PROJECTS ***********
 | Glibc | The GNU C Library is used as the C library in the GNU system and in GNU/Linux systems, as well as many other systems that use Linux as the kernel. 
 | GDB   | The GNU Project debugger, allows you to see what is going on `inside' another program while it executes -- or what another program was doing at the moment it crashed.
