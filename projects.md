@@ -12,7 +12,6 @@ Our infrastructure is being used to validate several Open Source projects
 
 |Project Name| Description|
 |---|---|
-
 | Bazel | Bazel is a free software tool that allows for the automation of building and testing of software. Similar to build tools like Make, Maven, and Gradle, Bazel builds software applications from source code using a set of rules. [Click here](https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel) to access the ppc64le binaries.
 
 <!---  *********** OLD PROJECTS ***********
