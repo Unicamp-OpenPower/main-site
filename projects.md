@@ -27,12 +27,10 @@ Our infrastructure is being used to validate several Open Source projects.
 | Computing on Linear Algebra | Blast library
 | Openjdk | an open-source implementation of the Java Platform, Standard Edition, and related projects
 Plus several individual users who are using Power for academic research (HTM) or for testing/developing code (tightvnc, qemu, JNA, etc.)
--->
-
 # Research projects
-
 |Project Name|Description|People Involved|
 |---|---|---|
 |HTM|Hardware Transactional Memory on Power architecture|University of Campinas and University of Alberta|
 |Code Verification|Code verification between multiple architectures|University of Campinas|
 |Seismic - CRS| Common Reflection Surface|University of Campinas|
+-->
