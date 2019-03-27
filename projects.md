@@ -5,14 +5,14 @@ pager: true
 ---
 
 
-Our infrastructure is being used to validate several Open Source projects
+Our infrastructure is being used to validate several Open Source projects.
 {.lead}
 
 # Open-source projects
 
-|Project Name| Description|
+|Project|FTP Link (ppc64le binaries)|
 |---|---|
-| Bazel | Bazel is a free software tool that allows for the automation of building and testing of software. Similar to build tools like Make, Maven, and Gradle, Bazel builds software applications from source code using a set of rules. [Click here](https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel) to access the ppc64le binaries.
+| [Bazel](https://bazel.build) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel](https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/)
 
 <!---  *********** OLD PROJECTS ***********
 | Glibc | The GNU C Library is used as the C library in the GNU system and in GNU/Linux systems, as well as many other systems that use Linux as the kernel. 
