@@ -14,6 +14,7 @@ Our infrastructure is being used to validate several Open Source projects.
 |---|---|
 | [Bazel](https://bazel.build) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel](https://oplab9.parqtec.unicamp.br/pub/ppc64el/bazel/)
 | [Docker CE](https://docs.docker.com/install) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/docker](https://oplab9.parqtec.unicamp.br/pub/ppc64el/docker)
+| [Glide](https://glide.sh) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/glide](https://oplab9.parqtec.unicamp.br/pub/ppc64el/glide)
 | [Grafana](https://grafana.com) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/grafana](https://oplab9.parqtec.unicamp.br/pub/ppc64el/grafana)
 | [Minikube](https://kubernetes.io/docs/setup/minikube) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/minikube](https://oplab9.parqtec.unicamp.br/pub/ppc64el/minikube)
 | [Terraform](https://www.terraform.io) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform](https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform)
