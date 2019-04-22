@@ -18,6 +18,8 @@ Our infrastructure is being used to validate several Open Source projects.
 | [Grafana](https://grafana.com) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/grafana](https://oplab9.parqtec.unicamp.br/pub/ppc64el/grafana)
 | [Kiali](https://www.kiali.io) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/kiali](https://oplab9.parqtec.unicamp.br/pub/ppc64el/kiali)
 | [Minikube](https://kubernetes.io/docs/setup/minikube) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/minikube](https://oplab9.parqtec.unicamp.br/pub/ppc64el/minikube)
+| [Minio](https://min.io) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/minio](https://oplab9.parqtec.unicamp.br/pub/ppc64el/minikube)
+| [Minio-MC](https://min.io) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/minio-mc](https://oplab9.parqtec.unicamp.br/pub/ppc64el/minikube)
 | [Terraform](https://www.terraform.io) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform](https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform)
 
 <!---  *********** OLD PROJECTS ***********
