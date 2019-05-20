@@ -70,3 +70,6 @@ You only need to use the following command:
 conda install -c conda-forge spacy
 ```
 
+------------
+
+*Written by [Gustavo Salibi](https://github.com/GustavoStorti).*
