@@ -24,6 +24,7 @@ python3.7 --version
 ```
 
 If you have not installed it, use the package manager of your system to install.
+
 * Start by updating the packages and installing the prerequisites:
 ```
 sudo apt update
@@ -48,7 +49,7 @@ sudo apt install python3.7
 ```
 bash Anaconda3-2019.03-Linux-ppc64le.sh
 ```
-3. The installer prompts “In order to continue the installation process, please review the license agreement.” Click Enter to view license terms.
+**3.** The installer prompts “In order to continue the installation process, please review the license agreement.” Click Enter to view license terms.
 
 **4.** Using Enter, scroll to the bottom of the license terms and enter “Yes” to agree to them.
 
