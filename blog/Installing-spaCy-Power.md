@@ -72,4 +72,4 @@ conda install -c conda-forge spacy
 
 ------------
 
-*Written by [Gustavo Salibi](https://github.com/GustavoStorti).*
+*Written by [Gustavo Salibi](https://github.com/gsalibi).*
