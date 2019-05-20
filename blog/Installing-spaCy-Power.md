@@ -11,7 +11,7 @@ author: Gustavo Salibi
 
 [spaCy](https://spacy.io) is an open-source software library for advanced Natural Language Processing, written in Python and Cython. The library is published under the MIT license and currently offers statistical neural network models for English, German, Spanish, Portuguese, French, Italian, Dutch and multi-language NER, as well as tokenization for various other languages.
 
-Its installation is very straightforward using the [pip](https://pypi.org/project/pip/) package manager. Entretando, você não obterá sucesso se tentar fazê-la em um processador Power. However, you will not succeed if you try to make it into a POWER processor. This is due to a problem with the headers of the Numpy library when using the pip. Thus, the easiest way to install spaCy is by using another package manager, [Conda](https://www.anaconda.com).
+Its installation is very straightforward using the [pip](https://pypi.org/project/pip/) package manager. However, you will not succeed if you try to make it into a POWER processor. This is due to a problem with the headers of the Numpy library when using the pip. Thus, the easiest way to install spaCy is by using another package manager, [Conda](https://www.anaconda.com).
 
 Conda is an open source, cross-platform, language-agnostic package manager and environment management system. It is released under the Berkeley Software Distribution License by Continuum Analytics.
 
