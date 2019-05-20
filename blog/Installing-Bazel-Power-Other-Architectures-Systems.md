@@ -157,4 +157,4 @@ Once installed, you can use Bazel itself to compile a new version. To do this, s
 <br>
 ------------
 
-*Written by [Gustavo Salibi](https://github.com/GustavoStorti).*
+*Written by [Gustavo Salibi](https://github.com/gsalibi).*
