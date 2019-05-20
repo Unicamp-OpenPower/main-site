@@ -1,5 +1,5 @@
 ---
-title:  Installing spaCy on POWER8 and POWER9.
+title:  Installing spaCy on POWER8 or POWER9.
 layout: page
 date: 2019-05-19
 author: Gustavo Salibi
