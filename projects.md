@@ -20,6 +20,7 @@ Our infrastructure is being used to validate several Open Source projects.
 | [Minikube](https://kubernetes.io/docs/setup/minikube) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/minikube](https://oplab9.parqtec.unicamp.br/pub/ppc64el/minikube)
 | [Minio](https://min.io) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/minio](https://oplab9.parqtec.unicamp.br/pub/ppc64el/minikube)
 | [Minio-MC](https://min.io) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/minio-mc](https://oplab9.parqtec.unicamp.br/pub/ppc64el/minikube)
+| [Restic](https://restic.net) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/restic](https://oplab9.parqtec.unicamp.br/pub/ppc64el/restic)
 | [Terraform](https://www.terraform.io) | [https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform](https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform)
 
 <!---  *********** OLD PROJECTS ***********
