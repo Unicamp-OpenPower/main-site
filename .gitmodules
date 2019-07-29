@@ -1,3 +1,7 @@
 [submodule "minicloud"]
 	path = minicloud
 	url = https://github.com/Unicamp-OpenPower/minicloud.git
+
+[submodule "talks"]
+        path = talks
+        url = https://github.com/Unicamp-OpenPower/talks.git
