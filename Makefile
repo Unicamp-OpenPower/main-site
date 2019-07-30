@@ -1,6 +1,7 @@
 all: build
 
 build:
+	git submodule update --init
 	python -m urubu build
 	touch _build/.nojekyll
 
